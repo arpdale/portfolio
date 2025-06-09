@@ -164,7 +164,7 @@ export default function CaseStudyPage() {
     },
   };
 
-  const caseStudy = caseStudies[slug] || caseStudies.blossom;
+  const caseStudy = caseStudies[slug as keyof typeof caseStudies] || caseStudies.blossom;
 
   return (
     <div>
@@ -198,7 +198,7 @@ export default function CaseStudyPage() {
           <div className="space-y-4">
             <p>{caseStudy.approach}</p>
             <ul className="list-disc pl-5 space-y-2">
-              {caseStudy.approachPoints.map((point, index) => (
+              {caseStudy.approachPoints.map((point: string, index: number) => (
                 <li key={index}>{point}</li>
               ))}
             </ul>
@@ -221,7 +221,7 @@ export default function CaseStudyPage() {
           <div className="space-y-4">
             <p>{caseStudy.outcome}</p>
             <ul className="list-disc pl-5 space-y-2">
-              {caseStudy.outcomePoints.map((point, index) => (
+              {caseStudy.outcomePoints.map((point: string, index: number) => (
                 <li key={index}>{point}</li>
               ))}
             </ul>

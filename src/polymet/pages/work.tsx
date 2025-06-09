@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import SectionHeading from "@/polymet/components/section-heading";
 import ProjectCard from "@/polymet/components/project-card";
 
