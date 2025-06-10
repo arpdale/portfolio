@@ -80,7 +80,7 @@ export default function AboutPage() {
           <div>
             <SectionHeading title="About Me" />
 
-            <div className="prose dark:prose-invert max-w-none">
+            <div className="prose dark:prose-invert space-y-4 max-w-none">
               <p className="text-xl">
                 I'm a strategic design leader with a passion for creating
                 human-centered systems that solve complex problems.
@@ -112,10 +112,10 @@ export default function AboutPage() {
                 to designing intelligent systems that collaborate with users.
               </p>
               <p>
-                When I'm not designing, I teach design leadership at UT Austin,
-                sharing my experience with the next generation of designers. I
-                also enjoy woodworking, playing ukulele, hiking, and tinkering
-                with vintage cars.
+              When I'm not designing, I teach the next genaration of designers and 
+              leaders about the value of design in business at UT Austin. I also enjoy 
+              woodworking, playing guitar, hiking, mountain biking and tinkering with 
+              my vintage car.
               </p>
             </div>
           </div>
