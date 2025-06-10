@@ -37,28 +37,35 @@ export default function AboutPage() {
 
   const timeline = [
     {
-      period: "2022 - Present",
-      role: "Lead Product Designer",
+      period: "2024 - Present",
+      role: "Founder / Product / Design / Eng",
       company: "Blossom",
       description:
         "Leading design for an AI-powered professional networking platform. Building the entire front-end experience and defining the product voice.",
     },
     {
-      period: "2020 - 2022",
-      role: "Director of Product Design",
+      period: "2022 - 2025",
+      role: "Senior Director of Product Design",
       company: "Wheel",
       description:
         "Led the design team for a telehealth platform connecting clinicians with digital health companies. Implemented design systems and research processes.",
     },
     {
-      period: "2018 - 2020",
-      role: "Senior UX Designer",
+      period: "2019 - 2022",
+      role: "Design Director, Mortgage",
       company: "USAA",
       description:
         "Designed personalized mortgage journeys for military members and their families. Created service blueprints and user archetypes.",
     },
     {
-      period: "2005 - 2018",
+      period: "2016 - 2019",
+      role: "Head of Design",
+      company: "Wellsmith",
+      description:
+        "Designed personalized mortgage journeys for military members and their families. Created service blueprints and user archetypes.",
+    },
+    {
+      period: "2008 - 2016",
       role: "Founder & Principal",
       company: "Design For Use",
       description:
@@ -114,7 +121,7 @@ export default function AboutPage() {
           </div>
           <div className="order-first lg:order-last">
             <img
-              src="https://picsum.photos/seed/davidabout/800/1000"
+              src="/images/dsr-porch.png"
               alt="David Richard"
               className="rounded-xl shadow-lg w-full max-w-md mx-auto"
             />

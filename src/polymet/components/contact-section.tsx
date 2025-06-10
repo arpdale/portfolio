@@ -46,7 +46,7 @@ export default function ContactSection() {
     {
       icon: MapPinIcon,
       title: "Location",
-      value: "Austin, TX",
+      value: "Austin | SF",
       link: null,
     },
   ];

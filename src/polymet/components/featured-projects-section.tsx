@@ -31,31 +31,31 @@ export default function FeaturedProjectsSection() {
 
   const projects = [
     {
-      title: "Blossom – AI-Powered Professional Networking",
+      title: "Nurture Your Network | Blossom",
       description:
-        "AI meets job seeking with thoughtful design. Built the entire front-end experience and voice of the product.",
-      image: "https://picsum.photos/seed/blossom123/800/600",
+        "AI meets job seeking with thoughtful design. Designed and built the entire experience and voice of the product.",
+      image: "/images/projects/blossom-home.png",
       slug: "blossom",
     },
     {
-      title: "Wheel – Unified Telehealth Platform",
+      title: "Virtual Care Platform | Wheel",
       description:
-        "Led the platform migration to a multi-tenant marketplace. Designed for both clinicians and enterprise clients.",
-      image: "https://picsum.photos/seed/wheel456/800/600",
+        "A multi-tenant marketplace and platform to connect patients with providers. Supports healthcare delivery for both urgent and longitudinal care.",
+      image: "/images/projects/wheel-services.png",
       slug: "wheel",
     },
     {
-      title: "Wellsmith – Behavioral Health App for Diabetes",
+      title: "Health Coaching for Diabetes | Wellsmith",
       description:
-        "Created an animated character system to drive engagement and adherence. Integrated devices and care team workflows.",
-      image: "https://picsum.photos/seed/wellsmith789/800/600",
+        "Driving positive behavior change for diabetes patients by capturing and tracking their progress via connected devices and self-reporting.",
+      image: "/images/projects/wellsmith-characters.png",
       slug: "wellsmith",
     },
     {
-      title: "USAA – Personalized Mortgage Journeys",
+      title: "Personalized Mortgage Journeys | USAA",
       description:
-        "Used data to define user archetypes, then created a massive service blueprint to align teams and uncover new product opportunities.",
-      image: "https://picsum.photos/seed/usaa012/800/600",
+        "Service blueprint and data-driven archetypes to drive personalized borrower experience.",
+      image: "/images/projects/usaa-service-blueprint.png",
       slug: "usaa",
     },
   ];
@@ -65,7 +65,7 @@ export default function FeaturedProjectsSection() {
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="Featured Work"
-          subtitle="A selection of projects that showcase my approach to design leadership and problem-solving."
+          subtitle="A selection of projects that showcase my approach to design, problem-solving, and leadership."
           className={cn(
             "transition-all duration-700 transform",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
