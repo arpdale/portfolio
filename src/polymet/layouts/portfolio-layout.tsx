@@ -134,7 +134,7 @@ export default function PortfolioLayout({
                 LinkedIn
               </a>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Austin, TX
+                Austin | SF
               </p>
             </div>
           </div>

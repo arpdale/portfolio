@@ -46,7 +46,7 @@ export default function AboutPreviewSection() {
             )}
           >
             <img
-              src="https://picsum.photos/seed/davidportrait/600/600"
+              src="/images/dsr-polaroid2.png"
               alt="David Richard"
               className="rounded-lg shadow-lg w-full max-w-md mx-auto"
             />
@@ -61,14 +61,14 @@ export default function AboutPreviewSection() {
             style={{ transitionDelay: "200ms" }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Design Leader, Entrepreneur, Educator
+              Designer | Leader | Mentor
             </h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <p>
-                I'm a strategic design leader with a background in mechanical
+                I'm a strategic designer and design leader with a background in mechanical
                 engineering from Stanford and over 15 years of experience
                 building products and teams. My journey has taken me from
-                founding a design agency to leading product design for
+                founding a design agency to leading product design and user researchfor
                 healthcare, fintech, and AI companies.
               </p>
               <p>
