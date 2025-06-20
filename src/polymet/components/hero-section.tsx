@@ -20,11 +20,11 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center py-16 px-6 md:px-12 overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-white dark:from-gray-900 dark:to-gray-950 opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 to-white dark:from-gray-900 dark:to-gray-950 opacity-90" />
 
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-amber-100 dark:bg-amber-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-40" />
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-cyan-100 dark:bg-cyan-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-40" />
 
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-amber-100 dark:bg-amber-900/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 opacity-40" />
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-cyan-100 dark:bg-cyan-900/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 opacity-40" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full">
@@ -35,14 +35,14 @@ export default function HeroSection() {
           )}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Designing Better Systems,{" "}
-            <span className="text-amber-600 dark:text-amber-400">
-              One Human Interaction
+            Designing Better Products,{" "}
+            <span className="text-cyan-600 dark:text-cyan-400">
+              One User Experience
             </span>{" "}
             at a Time
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8">
-            15+ years leading product design teams across healthcare, fintech,
+            15+ years leading product design and reserach teams across healthcare, fintech,
             and emerging tech. From startup scrappiness to enterprise-scale
             execution.
           </p>
@@ -50,7 +50,7 @@ export default function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="bg-amber-600 hover:bg-amber-700 text-white dark:bg-amber-500 dark:hover:bg-amber-600"
+              className="bg-cyan-600 hover:bg-cyan-700 text-white dark:bg-cyan-500 dark:hover:bg-cyan-600"
             >
               <Link to="/work">
                 View Work <ArrowRightIcon className="ml-2 h-4 w-4" />
@@ -60,7 +60,7 @@ export default function HeroSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-amber-600 text-amber-600 hover:bg-amber-50 dark:border-amber-400 dark:text-amber-400 dark:hover:bg-amber-900/20"
+              className="border-cyan-600 text-cyan-600 hover:bg-cyan-50 dark:border-cyan-400 dark:text-cyan-400 dark:hover:bg-cyan-900/20"
             >
               <a href="#" download>
                 Download Resume <DownloadIcon className="ml-2 h-4 w-4" />

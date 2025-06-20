@@ -94,8 +94,8 @@ export default function ContactSection() {
               <div className="space-y-8">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="bg-amber-100 dark:bg-amber-900/30 p-3 rounded-full mr-4">
-                      <item.icon className="h-6 w-6 text-amber-600 dark:text-amber-400" />
+                    <div className="bg-cyan-100 dark:bg-cyan-900/30 p-3 rounded-full mr-4">
+                      <item.icon className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900 dark:text-gray-100">
@@ -104,7 +104,7 @@ export default function ContactSection() {
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+                          className="text-gray-600 dark:text-gray-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
                           target={item.link.startsWith("http") ? "_blank" : ""}
                           rel={
                             item.link.startsWith("http")

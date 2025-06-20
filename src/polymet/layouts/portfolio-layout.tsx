@@ -47,7 +47,7 @@ export default function PortfolioLayout({
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link
             to="/"
-            className="text-xl font-medium tracking-tight hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+            className="text-xl font-medium tracking-tight hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
           >
             David Richard
           </Link>
@@ -59,9 +59,9 @@ export default function PortfolioLayout({
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-amber-600 dark:hover:text-amber-400 relative py-2",
+                  "text-sm font-medium transition-colors hover:text-cyan-600 dark:hover:text-cyan-400 relative py-2",
                   location.pathname === item.path
-                    ? "text-amber-600 dark:text-amber-400 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-amber-600 dark:after:bg-amber-400"
+                    ? "text-cyan-600 dark:text-cyan-400 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-cyan-600 dark:after:bg-cyan-400"
                     : ""
                 )}
               >
@@ -94,9 +94,9 @@ export default function PortfolioLayout({
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "text-lg font-medium transition-colors hover:text-amber-600 dark:hover:text-amber-400",
+                  "text-lg font-medium transition-colors hover:text-cyan-600 dark:hover:text-cyan-400",
                   location.pathname === item.path
-                    ? "text-amber-600 dark:text-amber-400"
+                    ? "text-cyan-600 dark:text-cyan-400"
                     : ""
                 )}
               >
@@ -121,7 +121,7 @@ export default function PortfolioLayout({
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
               <a
                 href="mailto:david.richard@gmail.com"
-                className="text-sm hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+                className="text-sm hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
               >
                 david.richard@gmail.com
               </a>
@@ -129,7 +129,7 @@ export default function PortfolioLayout({
                 href="https://linkedin.com/in/drichard/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+                className="text-sm hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
               >
                 LinkedIn
               </a>

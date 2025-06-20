@@ -135,11 +135,11 @@ export default function AboutPage() {
             {timeline.map((item, index) => (
               <div
                 key={index}
-                className="relative pl-10 border-l-2 border-amber-200 dark:border-amber-800"
+                className="relative pl-10 border-l-2 border-cyan-200 dark:border-cyan-800"
               >
-                <div className="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-amber-500" />
+                <div className="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-cyan-500" />
 
-                <p className="text-sm text-amber-600 dark:text-amber-400 mb-1">
+                <p className="text-sm text-cyan-600 dark:text-cyan-400 mb-1">
                   {item.period}
                 </p>
                 <h3 className="text-xl font-semibold mb-1">
@@ -162,7 +162,7 @@ export default function AboutPage() {
                 key={index}
                 className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6"
               >
-                <h3 className="text-xl font-semibold mb-4 text-amber-600 dark:text-amber-400">
+                <h3 className="text-xl font-semibold mb-4 text-cyan-600 dark:text-cyan-400">
                   {skillGroup.category}
                 </h3>
                 <ul className="space-y-2">
@@ -171,7 +171,7 @@ export default function AboutPage() {
                       key={skillIndex}
                       className="flex items-center text-gray-700 dark:text-gray-300"
                     >
-                      <span className="w-2 h-2 bg-amber-500 rounded-full mr-2" />
+                      <span className="w-2 h-2 bg-cyan-500 rounded-full mr-2" />
 
                       {skill}
                     </li>
@@ -185,7 +185,7 @@ export default function AboutPage() {
         <div>
           <SectionHeading title="Influences & Philosophy" />
 
-          <div className="bg-amber-50 dark:bg-amber-900/10 rounded-xl p-8">
+          <div className="bg-cyan-50 dark:bg-cyan-900/10 rounded-xl p-8">
             <div className="prose dark:prose-invert max-w-none">
               <p>
                 My approach to design has been shaped by a diverse set of
@@ -202,7 +202,7 @@ export default function AboutPage() {
                   purpose before implementation
                 </li>
                 <li>
-                  <strong>Daniel Pink's work on motivation</strong> - Designing
+                  <strong>Daniel cyan's work on motivation</strong> - Designing
                   for autonomy, mastery, and purpose
                 </li>
                 <li>
