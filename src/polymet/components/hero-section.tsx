@@ -42,7 +42,7 @@ export default function HeroSection() {
             at a Time
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8">
-            15+ years leading product design and reserach teams across healthcare, fintech,
+            15+ years leading product design and research teams across healthcare, fintech,
             and emerging tech. From startup scrappiness to enterprise-scale
             execution.
           </p>
