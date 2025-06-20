@@ -45,13 +45,13 @@ export default function ProjectCard({
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70" />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+        <h3 className="text-xl font-semibold mb-2 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
           {title}
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>
         <div
           className={cn(
-            "inline-flex items-center text-sm font-medium text-amber-600 dark:text-amber-400 transition-all duration-300",
+            "inline-flex items-center text-sm font-medium text-cyan-600 dark:text-cyan-400 transition-all duration-300",
             isHovered ? "gap-2" : "gap-1"
           )}
         >

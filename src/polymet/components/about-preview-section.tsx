@@ -33,7 +33,7 @@ export default function AboutPreviewSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 px-6 md:px-12 bg-amber-50 dark:bg-amber-900/10"
+      className="py-20 px-6 md:px-12 bg-cyan-50 dark:bg-cyan-900/10"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -85,7 +85,7 @@ export default function AboutPreviewSection() {
             </div>
             <Button
               asChild
-              className="mt-8 bg-amber-600 hover:bg-amber-700 text-white dark:bg-amber-500 dark:hover:bg-amber-600"
+              className="mt-8 bg-cyan-600 hover:bg-cyan-700 text-white dark:bg-cyan-500 dark:hover:bg-cyan-600"
             >
               <Link to="/about">
                 More About Me <ArrowRightIcon className="ml-2 h-4 w-4" />

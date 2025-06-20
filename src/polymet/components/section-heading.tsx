@@ -32,7 +32,7 @@ export default function SectionHeading({
         </p>
       )}
       <div
-        className={cn("h-1 w-20 bg-amber-500 dark:bg-amber-400 mt-4", {
+        className={cn("h-1 w-20 bg-cyan-500 dark:bg-cyan-400 mt-4", {
           "ml-0 mr-auto": alignment === "left",
           "mx-auto": alignment === "center",
           "ml-auto mr-0": alignment === "right",
