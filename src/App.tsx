@@ -21,7 +21,16 @@ function App() {
           </Routes>
         </PortfolioLayout>
       </Router>
-      <Analytics />
+      <Analytics 
+        debug={process.env.NODE_ENV === 'development'}
+        beforeSend={(event) => {
+          // Filter out any sensitive or unwanted URLs
+          if (event.url.includes('/admin') || event.url.includes('/private')) {
+            return null;
+          }
+          return event;
+        }}
+      />
     </>
   );
 }

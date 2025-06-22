@@ -36,6 +36,7 @@ export default function FeaturedProjectsSection() {
         "AI meets job seeking with thoughtful design. Designed and built the entire experience and voice of the product.",
       image: "/images/projects/blossom-home.png",
       slug: "blossom",
+      tags: ["Product Design", "AI/ML", "Mobile App", "React Native"],
     },
     {
       title: "Virtual Care Platform | Wheel",
@@ -43,6 +44,7 @@ export default function FeaturedProjectsSection() {
         "A multi-tenant marketplace and platform to connect patients with providers. Supports healthcare delivery for both urgent and longitudinal care.",
       image: "/images/projects/wheel-services.png",
       slug: "wheel",
+      tags: ["Healthcare", "B2B Platform", "Service Design", "React"],
     },
     {
       title: "Health Coaching for Diabetes | Wellsmith",
@@ -50,6 +52,7 @@ export default function FeaturedProjectsSection() {
         "Driving positive behavior change for diabetes patients by capturing and tracking their progress via connected devices and self-reporting.",
       image: "/images/projects/wellsmith-characters.png",
       slug: "wellsmith",
+      tags: ["Healthcare", "Behavior Change", "IoT", "Data Visualization"],
     },
     {
       title: "Personalized Mortgage Journeys | USAA",
@@ -57,6 +60,7 @@ export default function FeaturedProjectsSection() {
         "Service blueprint and data-driven archetypes to drive personalized borrower experience.",
       image: "/images/projects/usaa-service-blueprint.png",
       slug: "usaa",
+      tags: ["Fintech", "Service Design", "Personalization", "Enterprise"],
     },
   ];
 
@@ -91,6 +95,8 @@ export default function FeaturedProjectsSection() {
                 description={project.description}
                 image={project.image}
                 slug={project.slug}
+                tags={project.tags}
+                source="featured"
               />
             </div>
           ))}
