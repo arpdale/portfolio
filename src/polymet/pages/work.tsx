@@ -15,6 +15,7 @@ export default function WorkPage() {
       image: "https://picsum.photos/seed/blossom123/800/600",
       slug: "blossom",
       categories: ["ai", "product-design"],
+      tags: ["AI/ML", "React Native", "Product Design", "Mobile App"],
     },
     {
       title: "Wheel – Unified Telehealth Platform",
@@ -23,6 +24,7 @@ export default function WorkPage() {
       image: "https://picsum.photos/seed/wheel456/800/600",
       slug: "wheel",
       categories: ["healthcare", "platform-design"],
+      tags: ["Healthcare", "B2B Platform", "React", "Service Design"],
     },
     {
       title: "Wellsmith – Behavioral Health App for Diabetes",
@@ -31,6 +33,7 @@ export default function WorkPage() {
       image: "https://picsum.photos/seed/wellsmith789/800/600",
       slug: "wellsmith",
       categories: ["healthcare", "product-design"],
+      tags: ["Healthcare", "Behavior Change", "Animation", "IoT"],
     },
     {
       title: "USAA – Personalized Mortgage Journeys",
@@ -39,6 +42,7 @@ export default function WorkPage() {
       image: "https://picsum.photos/seed/usaa012/800/600",
       slug: "usaa",
       categories: ["fintech", "service-design"],
+      tags: ["Fintech", "Service Design", "Enterprise", "Data Strategy"],
     },
     {
       title: "Medici – Telemedicine Platform",
@@ -47,6 +51,7 @@ export default function WorkPage() {
       image: "https://picsum.photos/seed/medici345/800/600",
       slug: "medici",
       categories: ["healthcare", "product-design"],
+      tags: ["Healthcare", "Telemedicine", "UX Design", "Provider Tools"],
     },
   ];
 
@@ -97,6 +102,8 @@ export default function WorkPage() {
               description={project.description}
               image={project.image}
               slug={project.slug}
+              tags={project.tags}
+              source="work-page"
             />
           ))}
         </div>
