@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon, DownloadIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { analytics } from "@/lib/analytics";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,6 +17,14 @@ export default function HeroSection() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleViewWorkClick = () => {
+    analytics.trackPageView("Work", { source: "hero_cta" });
+  };
+
+  const handleResumeDownload = () => {
+    analytics.trackResumeDownload("hero");
+  };
 
   return (
     <section className="relative min-h-[90vh] flex items-center py-16 px-6 md:px-12 overflow-hidden">
@@ -52,7 +61,7 @@ export default function HeroSection() {
               size="lg"
               className="bg-cyan-600 hover:bg-cyan-700 text-white dark:bg-cyan-500 dark:hover:bg-cyan-600"
             >
-              <Link to="/work">
+              <Link to="/work" onClick={handleViewWorkClick}>
                 View Work <ArrowRightIcon className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -62,7 +71,7 @@ export default function HeroSection() {
               variant="outline"
               className="border-cyan-600 text-cyan-600 hover:bg-cyan-50 dark:border-cyan-400 dark:text-cyan-400 dark:hover:bg-cyan-900/20"
             >
-              <a href="#" download>
+              <a href="#" download onClick={handleResumeDownload}>
                 Download Resume <DownloadIcon className="ml-2 h-4 w-4" />
               </a>
             </Button>
