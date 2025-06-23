@@ -68,7 +68,7 @@ export default function AboutPreviewSection() {
                 I'm a strategic designer and design leader with a background in mechanical
                 engineering from Stanford and over 15 years of experience
                 building products and teams. My journey has taken me from
-                founding a design agency to leading product design and user researchfor
+                founding a design agency to leading product design and user research for
                 healthcare, fintech, and AI companies.
               </p>
               <p>
