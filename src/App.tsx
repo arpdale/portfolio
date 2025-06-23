@@ -7,6 +7,7 @@ import AboutPage from '@/polymet/pages/about';
 import WorkPage from '@/polymet/pages/work';
 import ContactPage from '@/polymet/pages/contact';
 import CaseStudyPage from '@/polymet/pages/case-study';
+import GeolocationDemo from '@/components/GeolocationDemo';
 import { geolocationService } from '@/services/geolocationService';
 import { useGeolocationTracking } from '@/lib/analytics';
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/work" element={<WorkPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/case-study/:id?" element={<CaseStudyPage />} />
+            <Route path="/geo" element={<GeolocationDemo />} />
           </Routes>
         </PortfolioLayout>
       </Router>
