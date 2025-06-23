@@ -1,11 +1,11 @@
-import { track } from '@vercel/analytics';
 import { useEffect } from 'react';
+import { geolocationService } from '@/services/geolocationService';
 
-// Portfolio-specific analytics events
+// Portfolio-specific analytics events with geolocation context
 export const analytics = {
   // Navigation tracking
   trackPageView: (pageName: string, additionalData?: Record<string, any>) => {
-    track('Page View', { 
+    geolocationService.trackEventWithGeo('Page View', { 
       page: pageName,
       ...additionalData 
     });
@@ -13,14 +13,14 @@ export const analytics = {
 
   // Project interaction tracking
   trackProjectView: (projectName: string, projectType?: string) => {
-    track('Project Viewed', { 
+    geolocationService.trackEventWithGeo('Project Viewed', { 
       project: projectName,
       type: projectType || 'unknown'
     });
   },
 
   trackProjectClick: (projectName: string, source: string) => {
-    track('Project Clicked', { 
+    geolocationService.trackEventWithGeo('Project Clicked', { 
       project: projectName,
       source: source // 'featured', 'work-page', 'case-study', etc.
     });
@@ -28,25 +28,25 @@ export const analytics = {
 
   // Contact form tracking
   trackContactFormSubmit: (formType: string = 'contact') => {
-    track('Contact Form Submit', { 
+    geolocationService.trackEventWithGeo('Contact Form Submit', { 
       form_type: formType 
     });
   },
 
   trackContactFormStart: () => {
-    track('Contact Form Started');
+    geolocationService.trackEventWithGeo('Contact Form Started');
   },
 
   // Resume/CV tracking
   trackResumeDownload: (source: string) => {
-    track('Resume Downloaded', { 
+    geolocationService.trackEventWithGeo('Resume Downloaded', { 
       source: source // 'header', 'about-page', 'footer', etc.
     });
   },
 
   // Social media tracking
   trackSocialClick: (platform: string, location: string) => {
-    track('Social Link Clicked', { 
+    geolocationService.trackEventWithGeo('Social Link Clicked', { 
       platform: platform, // 'linkedin', 'github', 'twitter', etc.
       location: location   // 'header', 'footer', 'about-page', etc.
     });
@@ -54,13 +54,13 @@ export const analytics = {
 
   // Case study tracking
   trackCaseStudyView: (caseStudyId: string) => {
-    track('Case Study Viewed', { 
+    geolocationService.trackEventWithGeo('Case Study Viewed', { 
       case_study: caseStudyId 
     });
   },
 
   trackCaseStudyNavigation: (direction: 'next' | 'previous', currentStudy: string) => {
-    track('Case Study Navigation', { 
+    geolocationService.trackEventWithGeo('Case Study Navigation', { 
       direction: direction,
       current_study: currentStudy 
     });
@@ -68,14 +68,14 @@ export const analytics = {
 
   // Engagement tracking
   trackScrollDepth: (depth: number, page: string) => {
-    track('Scroll Depth', { 
+    geolocationService.trackEventWithGeo('Scroll Depth', { 
       depth_percent: depth,
       page: page 
     });
   },
 
   trackTimeOnPage: (timeInSeconds: number, page: string) => {
-    track('Time on Page', { 
+    geolocationService.trackEventWithGeo('Time on Page', { 
       time_seconds: timeInSeconds,
       page: page 
     });
@@ -83,11 +83,31 @@ export const analytics = {
 
   // External link tracking
   trackExternalLink: (url: string, linkText: string, location: string) => {
-    track('External Link Clicked', { 
+    geolocationService.trackEventWithGeo('External Link Clicked', { 
       url: url,
       link_text: linkText,
       location: location 
     });
+  },
+
+  // New geolocation-specific analytics methods
+  getVisitorLocation: () => {
+    return geolocationService.getFormattedLocation();
+  },
+
+  getGeolocationData: () => {
+    return geolocationService.getGeolocationData();
+  },
+
+  // Track when geolocation is successfully captured
+  trackGeolocationSuccess: () => {
+    const geoData = geolocationService.getGeolocationData();
+    if (geoData) {
+      geolocationService.trackEventWithGeo('Geolocation Success', {
+        location: geolocationService.getFormattedLocation(),
+        has_precise_location: !!(geoData.latitude && geoData.longitude)
+      });
+    }
   }
 };
 
@@ -98,7 +118,34 @@ export const usePageTracking = (pageName: string) => {
   }, [pageName]);
 };
 
-// Scroll depth tracking hook
+// Hook for geolocation tracking initialization
+export const useGeolocationTracking = () => {
+  useEffect(() => {
+    const checkAndTrackGeolocation = async () => {
+      // Wait a bit for geolocation service to initialize
+      setTimeout(() => {
+        const geoData = geolocationService.getGeolocationData();
+        if (geoData) {
+          analytics.trackGeolocationSuccess();
+          
+          // Debug log in development
+          if (import.meta.env.DEV) {
+            console.log('🌍 Visitor location captured:', {
+              location: geolocationService.getFormattedLocation(),
+              city: geoData.city,
+              country: geoData.country,
+              region: geoData.region
+            });
+          }
+        }
+      }, 2000); // Give geolocation service time to initialize
+    };
+
+    checkAndTrackGeolocation();
+  }, []);
+};
+
+// Enhanced scroll depth tracking hook with geolocation
 export const useScrollTracking = (pageName: string) => {
   useEffect(() => {
     let maxScroll = 0;

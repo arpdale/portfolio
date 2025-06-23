@@ -1,13 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
+import { useEffect } from 'react';
 import PortfolioLayout from '@/polymet/layouts/portfolio-layout';
 import HomePage from '@/polymet/pages/home';
 import AboutPage from '@/polymet/pages/about';
 import WorkPage from '@/polymet/pages/work';
 import ContactPage from '@/polymet/pages/contact';
 import CaseStudyPage from '@/polymet/pages/case-study';
+import { geolocationService } from '@/services/geolocationService';
+import { useGeolocationTracking } from '@/lib/analytics';
 
 function App() {
+  // Initialize geolocation tracking when app starts
+  useEffect(() => {
+    geolocationService.initializeTracking();
+  }, []);
+
+  // Track when geolocation is successfully captured
+  useGeolocationTracking();
+
   return (
     <>
       <Router>
