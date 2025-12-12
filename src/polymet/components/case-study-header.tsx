@@ -4,7 +4,6 @@ interface CaseStudyHeaderProps {
   company: string;
   projectName: string;
   subtitle: string;
-  image: string;
   role: string;
   duration: string;
   className?: string;
@@ -14,7 +13,6 @@ export default function CaseStudyHeader({
   company,
   projectName,
   subtitle,
-  image,
   role,
   duration,
   className,

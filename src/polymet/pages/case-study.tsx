@@ -90,6 +90,7 @@ export default function CaseStudyPage() {
 
       reflection:
         "This project highlighted the importance of designing for multiple stakeholders while maintaining a cohesive experience. By creating a flexible platform architecture, we were able to accommodate diverse needs without compromising usability or clinical quality.",
+      images: {},
       nextProject: "wellsmith",
       prevProject: "blossom",
     },
@@ -129,6 +130,7 @@ export default function CaseStudyPage() {
 
       reflection:
         "This project showed how emotional design can transform clinical experiences. By creating characters that users cared about, we were able to motivate behavior change more effectively than traditional approaches. The integration with care teams also proved critical, demonstrating that technology works best when it enhances human relationships rather than replacing them.",
+      images: {},
       nextProject: "usaa",
       prevProject: "wheel",
     },
@@ -168,6 +170,7 @@ export default function CaseStudyPage() {
 
       reflection:
         "This project demonstrated the power of combining data analysis with human-centered design in a large enterprise context. By creating a shared understanding of member needs across the organization, we were able to drive meaningful change despite complex constraints. The service blueprint approach has since been adopted by other teams at USAA.",
+      images: {},
       nextProject: "blossom",
       prevProject: "wellsmith",
     },
@@ -270,7 +273,6 @@ export default function CaseStudyPage() {
         company={caseStudy.company}
         projectName={caseStudy.projectName}
         subtitle={caseStudy.subtitle}
-        image={caseStudy.image}
         role={caseStudy.role}
         duration={caseStudy.duration}
       />
@@ -279,7 +281,7 @@ export default function CaseStudyPage() {
         <CaseStudySection
           title="The Challenge"
           imagePosition="right"
-          image={caseStudy.images?.challenge || "https://picsum.photos/seed/challenge123/600/400"}
+          image={(caseStudy.images as Record<string, string>)?.challenge || "https://picsum.photos/seed/challenge123/600/400"}
           imageAlt="User research session"
         >
           <div className="space-y-4">
@@ -291,7 +293,7 @@ export default function CaseStudyPage() {
         <CaseStudySection
           title="The Approach"
           imagePosition="left"
-          image={caseStudy.images?.approach || "https://picsum.photos/seed/approach456/600/400"}
+          image={(caseStudy.images as Record<string, string>)?.approach || "https://picsum.photos/seed/approach456/600/400"}
           imageAlt="Design process diagram"
         >
           <div className="space-y-4">
@@ -307,7 +309,7 @@ export default function CaseStudyPage() {
         <CaseStudySection
           title="The Solution"
           imagePosition="right"
-          image={caseStudy.images?.solution || "https://picsum.photos/seed/solution789/600/400"}
+          image={(caseStudy.images as Record<string, string>)?.solution || "https://picsum.photos/seed/solution789/600/400"}
           imageAlt="Final design solution"
         >
           <div className="space-y-4">
