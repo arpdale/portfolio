@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
 import { analytics } from "@/lib/analytics";
 
 interface ProjectCardProps {
@@ -55,11 +54,14 @@ export default function ProjectCard({
           {title}
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-6">
           {tags.map((tag) => (
-            <Badge key={tag} variant="secondary" className="text-xs">
+            <span
+              key={tag}
+              className="px-3 py-1 text-xs font-medium rounded-full bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300"
+            >
               {tag}
-            </Badge>
+            </span>
           ))}
         </div>
         <div
