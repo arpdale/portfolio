@@ -71,7 +71,7 @@ export default function HeroSection() {
               variant="outline"
               className="border-cyan-600 text-cyan-600 hover:bg-cyan-50 dark:border-cyan-400 dark:text-cyan-400 dark:hover:bg-cyan-900/20"
             >
-              <a href="#" download onClick={handleResumeDownload}>
+              <a href="/resume/david-richard-resume.pdf" download onClick={handleResumeDownload}>
                 Download Resume <DownloadIcon className="ml-2 h-4 w-4" />
               </a>
             </Button>
