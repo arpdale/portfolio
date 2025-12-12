@@ -34,7 +34,7 @@ export default function FeaturedProjectsSection() {
       title: "Nurture Your Network | Blossom",
       description:
         "AI meets job seeking with thoughtful design. Designed and built the entire experience and voice of the product.",
-      image: "/images/projects/blossom-home.png",
+      image: "/images/projects/blossom-card.png",
       slug: "blossom",
       tags: ["Product Design", "AI/ML", "Mobile App", "React Native"],
     },
@@ -42,7 +42,7 @@ export default function FeaturedProjectsSection() {
       title: "Virtual Care Platform | Wheel",
       description:
         "A multi-tenant marketplace and platform to connect patients with providers. Supports healthcare delivery for both urgent and longitudinal care.",
-      image: "/images/projects/wheel-services.png",
+      image: "/images/projects/wheel-card.png",
       slug: "wheel",
       tags: ["Healthcare", "B2B Platform", "Service Design", "React"],
     },
@@ -50,7 +50,7 @@ export default function FeaturedProjectsSection() {
       title: "Health Coaching for Diabetes | Wellsmith",
       description:
         "Driving positive behavior change for diabetes patients by capturing and tracking their progress via connected devices and self-reporting.",
-      image: "/images/projects/wellsmith-characters.png",
+      image: "/images/projects/wellsmith-card.png",
       slug: "wellsmith",
       tags: ["Healthcare", "Behavior Change", "IoT", "Data Visualization"],
     },
@@ -58,7 +58,7 @@ export default function FeaturedProjectsSection() {
       title: "Personalized Mortgage Journeys | USAA",
       description:
         "Service blueprint and data-driven archetypes to drive personalized borrower experience.",
-      image: "/images/projects/usaa-service-blueprint.png",
+      image: "/images/projects/usaa-card.png",
       slug: "usaa",
       tags: ["Fintech", "Service Design", "Personalization", "Enterprise"],
     },

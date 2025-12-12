@@ -25,6 +25,7 @@ export default function PortfolioLayout({
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const navItems = [

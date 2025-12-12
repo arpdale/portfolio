@@ -1,22 +1,24 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import CaseStudyHeader from "@/polymet/components/case-study-header";
 import CaseStudySection from "@/polymet/components/case-study-section";
+import SectionHeading from "@/polymet/components/section-heading";
+import ProjectCard from "@/polymet/components/project-card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export default function CaseStudyPage() {
-  const { slug = "blossom" } = useParams();
+  const { id } = useParams();
 
   // Mock data for case studies
   const caseStudies = {
     blossom: {
-      title: "Blossom – AI-Powered Professional Networking",
+      company: "Blossom",
+      projectName: "AI-Powered Professional Networking",
       subtitle:
         "Designing a human-centered AI assistant that transforms how people find jobs and build professional connections.",
       image: "https://picsum.photos/seed/blossom123/1200/600",
-      role: "Lead Product Designer",
-      duration: "2022 - Present",
+      role: "Head of Design & Product",
+      duration: "2024 - Present",
       challenge:
         "The job search process is broken. It's impersonal, inefficient, and often demoralizing. Job seekers spend countless hours submitting applications into the void, while recruiters struggle to identify qualified candidates from a sea of resumes.",
       challengeDetail:
@@ -45,16 +47,21 @@ export default function CaseStudyPage() {
 
       reflection:
         "This project reinforced the importance of keeping humans at the center of AI-powered experiences. By focusing on augmenting human capabilities rather than replacing them, we created a tool that builds meaningful connections and helps people achieve their professional goals.",
+      images: {
+        approach: "/images/projects/blossom/approach.png",
+        solution: "/images/projects/blossom/solution.png",
+      },
       nextProject: "wheel",
       prevProject: "usaa",
     },
     wheel: {
-      title: "Wheel – Unified Telehealth Platform",
+      company: "Wheel",
+      projectName: "Unified Telehealth Platform",
       subtitle:
         "Leading the platform migration to a multi-tenant marketplace that serves both clinicians and enterprise clients.",
       image: "https://picsum.photos/seed/wheel456/1200/600",
-      role: "Director of Product Design",
-      duration: "2020 - 2022",
+      role: "Sr. Director, Product Design & Research",
+      duration: "2022 - 2025",
       challenge:
         "Wheel needed to transform from a single-purpose telehealth service to a comprehensive platform that could support multiple healthcare companies and thousands of clinicians. The existing system was built for a single use case and couldn't scale to meet growing demand.",
       challengeDetail:
@@ -87,11 +94,12 @@ export default function CaseStudyPage() {
       prevProject: "blossom",
     },
     wellsmith: {
-      title: "Wellsmith – Behavioral Health App for Diabetes",
+      company: "Wellsmith",
+      projectName: "Behavioral Health App for Diabetes",
       subtitle:
         "Creating an engaging character system to drive adherence and improve health outcomes for diabetes patients.",
       image: "https://picsum.photos/seed/wellsmith789/1200/600",
-      role: "Principal Designer",
+      role: "Head of Design and Research",
       duration: "2016 - 2018",
       challenge:
         "Diabetes management requires consistent daily actions, but many patients struggle with adherence to treatment plans. Traditional health apps fail to engage users over the long term, leading to poor health outcomes.",
@@ -125,12 +133,13 @@ export default function CaseStudyPage() {
       prevProject: "wheel",
     },
     usaa: {
-      title: "USAA – Personalized Mortgage Journeys",
+      company: "USAA",
+      projectName: "Personalized Mortgage Journeys",
       subtitle:
         "Using data to define user archetypes and create service blueprints that aligned teams and uncovered new product opportunities.",
       image: "https://picsum.photos/seed/usaa012/1200/600",
-      role: "Senior UX Designer",
-      duration: "2018 - 2020",
+      role: "Design Directory, Real Estate Lending",
+      duration: "2019 - 2022",
       challenge:
         "USAA's mortgage experience was designed as a one-size-fits-all journey, but military members have unique circumstances that affect their home buying process. The existing system didn't account for frequent relocations, deployment schedules, or VA loan eligibility.",
       challengeDetail:
@@ -164,12 +173,102 @@ export default function CaseStudyPage() {
     },
   };
 
-  const caseStudy = caseStudies[slug as keyof typeof caseStudies] || caseStudies.blossom;
+  const projects = [
+    {
+      title: "Nurture Your Network | Blossom",
+      description:
+        "AI meets job seeking with thoughtful design. Designed and built the entire experience and voice of the product.",
+      image: "/images/projects/blossom-card.png",
+      slug: "blossom",
+      tags: ["Product Design", "AI/ML", "Mobile App", "React Native"],
+    },
+    {
+      title: "Virtual Care Platform | Wheel",
+      description:
+        "A multi-tenant marketplace and platform to connect patients with providers. Supports healthcare delivery for both urgent and longitudinal care.",
+      image: "/images/projects/wheel-card.png",
+      slug: "wheel",
+      tags: ["Healthcare", "B2B Platform", "Service Design", "React"],
+    },
+    {
+      title: "Health Coaching for Diabetes | Wellsmith",
+      description:
+        "Driving positive behavior change for diabetes patients by capturing and tracking their progress via connected devices and self-reporting.",
+      image: "/images/projects/wellsmith-card.png",
+      slug: "wellsmith",
+      tags: ["Healthcare", "Behavior Change", "IoT", "Data Visualization"],
+    },
+    {
+      title: "Personalized Mortgage Journeys | USAA",
+      description:
+        "Service blueprint and data-driven archetypes to drive personalized borrower experience.",
+      image: "/images/projects/usaa-card.png",
+      slug: "usaa",
+      tags: ["Fintech", "Service Design", "Personalization", "Enterprise"],
+    },
+  ];
+
+  // If no id provided, show the landing page with all project cards
+  if (!id) {
+    return (
+      <div className="py-16 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <SectionHeading
+            title="Case Studies"
+            subtitle="A collection of projects that showcase my approach to design leadership and problem-solving across healthcare, fintech, and AI."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.slug}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                slug={project.slug}
+                tags={project.tags}
+                source="case-study-landing"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const caseStudy = caseStudies[id as keyof typeof caseStudies];
+
+  // If invalid id, show landing page
+  if (!caseStudy) {
+    return (
+      <div className="py-16 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <SectionHeading
+            title="Case Studies"
+            subtitle="A collection of projects that showcase my approach to design leadership and problem-solving across healthcare, fintech, and AI."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.slug}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                slug={project.slug}
+                tags={project.tags}
+                source="case-study-landing"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
       <CaseStudyHeader
-        title={caseStudy.title}
+        company={caseStudy.company}
+        projectName={caseStudy.projectName}
         subtitle={caseStudy.subtitle}
         image={caseStudy.image}
         role={caseStudy.role}
@@ -180,7 +279,7 @@ export default function CaseStudyPage() {
         <CaseStudySection
           title="The Challenge"
           imagePosition="right"
-          image="https://picsum.photos/seed/challenge123/600/400"
+          image={caseStudy.images?.challenge || "https://picsum.photos/seed/challenge123/600/400"}
           imageAlt="User research session"
         >
           <div className="space-y-4">
@@ -192,7 +291,7 @@ export default function CaseStudyPage() {
         <CaseStudySection
           title="The Approach"
           imagePosition="left"
-          image="https://picsum.photos/seed/approach456/600/400"
+          image={caseStudy.images?.approach || "https://picsum.photos/seed/approach456/600/400"}
           imageAlt="Design process diagram"
         >
           <div className="space-y-4">
@@ -208,7 +307,7 @@ export default function CaseStudyPage() {
         <CaseStudySection
           title="The Solution"
           imagePosition="right"
-          image="https://picsum.photos/seed/solution789/600/400"
+          image={caseStudy.images?.solution || "https://picsum.photos/seed/solution789/600/400"}
           imageAlt="Final design solution"
         >
           <div className="space-y-4">
@@ -241,13 +340,13 @@ export default function CaseStudyPage() {
               variant="outline"
               className="flex items-center gap-2"
             >
-              <Link to={`/work/${caseStudy.prevProject}`}>
+              <Link to={`/case-study/${caseStudy.prevProject}`}>
                 <ArrowLeftIcon className="h-4 w-4" /> Previous Project
               </Link>
             </Button>
           )}
           <Button asChild>
-            <Link to="/work">View All Work</Link>
+            <Link to="/case-study">View All Work</Link>
           </Button>
           {caseStudy.nextProject && (
             <Button
@@ -255,7 +354,7 @@ export default function CaseStudyPage() {
               variant="outline"
               className="flex items-center gap-2"
             >
-              <Link to={`/work/${caseStudy.nextProject}`}>
+              <Link to={`/case-study/${caseStudy.nextProject}`}>
                 Next Project <ArrowRightIcon className="h-4 w-4" />
               </Link>
             </Button>
