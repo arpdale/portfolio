@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
-import SectionHeading from "@/polymet/components/section-heading";
 import ContactForm from "@/polymet/components/contact-form";
 import { MailIcon, LinkedinIcon, MapPinIcon } from "lucide-react";
 
@@ -52,19 +51,9 @@ export default function ContactSection() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-16 px-6 md:px-12">
+    <section ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
-        <SectionHeading
-          title="Let's Connect"
-          subtitle="I'm open to new opportunities, consulting, or just a good design conversation."
-          alignment="center"
-          className={cn(
-            "transition-all duration-700 transform",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          )}
-        />
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div
             className={cn(
               "transition-all duration-700 transform",
