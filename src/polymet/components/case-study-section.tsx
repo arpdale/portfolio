@@ -8,6 +8,7 @@ interface CaseStudySectionProps {
   children: React.ReactNode;
   imagePosition?: "left" | "right" | "none";
   image?: string;
+  fallbackImage?: string;
   imageAlt?: string;
   className?: string;
 }
@@ -17,9 +18,11 @@ export default function CaseStudySection({
   children,
   imagePosition = "none",
   image,
+  fallbackImage,
   imageAlt = "",
   className,
 }: CaseStudySectionProps) {
+  const [imgSrc, setImgSrc] = useState(image);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -73,7 +76,7 @@ export default function CaseStudySection({
       </div>
     );
 
-    const imageContent = image ? (
+    const imageContent = imgSrc ? (
       <div
         className={cn(
           "transition-all duration-700 transform",
@@ -85,9 +88,14 @@ export default function CaseStudySection({
         )}
       >
         <img
-          src={image}
+          src={imgSrc}
           alt={imageAlt}
           className="rounded-lg shadow-lg w-full"
+          onError={() => {
+            if (fallbackImage && imgSrc !== fallbackImage) {
+              setImgSrc(fallbackImage);
+            }
+          }}
         />
       </div>
     ) : null;

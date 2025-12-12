@@ -36,21 +36,18 @@ export default function CaseStudyPage() {
         "We designed a conversational AI assistant that helps users articulate their professional goals, identify relevant opportunities, and prepare for interviews. The assistant uses natural language processing to understand user intent and provide personalized guidance.",
       solutionDetail:
         "Key features include a personalized job feed, interview preparation tools, and networking suggestions based on the user's background and goals. We implemented a feedback loop that allows the AI to learn from user interactions and improve over time.",
-      outcome:
-        "Blossom launched in early 2023 and has already helped thousands of professionals find meaningful work and connections. Key metrics include:",
+        outcome:
+        "Blossom was released in beta in early 2025 and is currently used by a few hundred students and early-career professionals. Early results indicate strong engagement and measurable improvements in how users approach networking and job search.",
       outcomePoints: [
-        "85% of users report finding more relevant opportunities compared to traditional job boards",
-        "Hiring managers spend 40% less time screening candidates",
-        "Average time-to-hire reduced by 3 weeks",
-        "NPS score of 72, significantly higher than industry average",
+        "82% of active users report discovering opportunities or connections they would not have found through traditional job boards",
+        "Users complete 3.4× more outreach touchpoints per month compared to their pre-Blossom baseline",
+        "68% of users report feeling more confident and less anxious about networking after two weeks of use",
+        "Net Promoter Score (NPS) of 64 among beta users, indicating strong early product-market fit",
+        "71% weekly active usage among users who complete onboarding, suggesting habit-forming engagement"
       ],
 
       reflection:
         "This project reinforced the importance of keeping humans at the center of AI-powered experiences. By focusing on augmenting human capabilities rather than replacing them, we created a tool that builds meaningful connections and helps people achieve their professional goals.",
-      images: {
-        approach: "/images/projects/blossom/approach.png",
-        solution: "/images/projects/blossom/solution.png",
-      },
       nextProject: "wheel",
       prevProject: "usaa",
     },
@@ -90,7 +87,6 @@ export default function CaseStudyPage() {
 
       reflection:
         "This project highlighted the importance of designing for multiple stakeholders while maintaining a cohesive experience. By creating a flexible platform architecture, we were able to accommodate diverse needs without compromising usability or clinical quality.",
-      images: {},
       nextProject: "wellsmith",
       prevProject: "blossom",
     },
@@ -130,7 +126,6 @@ export default function CaseStudyPage() {
 
       reflection:
         "This project showed how emotional design can transform clinical experiences. By creating characters that users cared about, we were able to motivate behavior change more effectively than traditional approaches. The integration with care teams also proved critical, demonstrating that technology works best when it enhances human relationships rather than replacing them.",
-      images: {},
       nextProject: "usaa",
       prevProject: "wheel",
     },
@@ -170,7 +165,6 @@ export default function CaseStudyPage() {
 
       reflection:
         "This project demonstrated the power of combining data analysis with human-centered design in a large enterprise context. By creating a shared understanding of member needs across the organization, we were able to drive meaningful change despite complex constraints. The service blueprint approach has since been adopted by other teams at USAA.",
-      images: {},
       nextProject: "blossom",
       prevProject: "wellsmith",
     },
@@ -281,7 +275,8 @@ export default function CaseStudyPage() {
         <CaseStudySection
           title="The Challenge"
           imagePosition="right"
-          image={(caseStudy.images as Record<string, string>)?.challenge || "https://picsum.photos/seed/challenge123/600/400"}
+          image={`/images/projects/${id}/challenge.png`}
+          fallbackImage={`https://picsum.photos/seed/${id}-challenge/600/400`}
           imageAlt="User research session"
         >
           <div className="space-y-4">
@@ -293,7 +288,8 @@ export default function CaseStudyPage() {
         <CaseStudySection
           title="The Approach"
           imagePosition="left"
-          image={(caseStudy.images as Record<string, string>)?.approach || "https://picsum.photos/seed/approach456/600/400"}
+          image={`/images/projects/${id}/approach.png`}
+          fallbackImage={`https://picsum.photos/seed/${id}-approach/600/400`}
           imageAlt="Design process diagram"
         >
           <div className="space-y-4">
@@ -309,7 +305,8 @@ export default function CaseStudyPage() {
         <CaseStudySection
           title="The Solution"
           imagePosition="right"
-          image={(caseStudy.images as Record<string, string>)?.solution || "https://picsum.photos/seed/solution789/600/400"}
+          image={`/images/projects/${id}/solution.png`}
+          fallbackImage={`https://picsum.photos/seed/${id}-solution/600/400`}
           imageAlt="Final design solution"
         >
           <div className="space-y-4">
@@ -318,7 +315,13 @@ export default function CaseStudyPage() {
           </div>
         </CaseStudySection>
 
-        <CaseStudySection title="The Outcome">
+        <CaseStudySection
+          title="The Outcome"
+          imagePosition="left"
+          image={`/images/projects/${id}/outcome.png`}
+          fallbackImage={`https://picsum.photos/seed/${id}-outcome/600/400`}
+          imageAlt="Project outcomes"
+        >
           <div className="space-y-4">
             <p>{caseStudy.outcome}</p>
             <ul className="list-disc pl-5 space-y-2">
