@@ -116,12 +116,13 @@ export default function CaseStudyPage() {
       solutionDetail:
         "The app integrated with glucose monitors, activity trackers, and other devices to minimize manual data entry. Care teams could monitor patient progress and intervene when necessary, creating a connected care experience.",
       outcome:
-        "The Wellsmith app demonstrated remarkable improvements in patient engagement and health outcomes:",
+        "Wellsmith helped people with diabetes achieve clinically meaningful improvements in weight, glycemic control, and daily habits through a highly engaging, behavior-driven digital experience.",
       outcomePoints: [
-        "78% retention rate after 6 months (compared to industry average of 30%)",
-        "Average A1C reduction of 1.2 points among active users",
-        "92% of users reported feeling more supported in their diabetes management",
-        "Reduced hospital admissions by 40% among program participants",
+        "Participants lost an average of 6.3 lbs, with the top 10% achieving up to 23.7 lbs of weight loss",
+        "Estimated A1C levels decreased by an average of 1.4 points, with top users seeing reductions of over 4 points",
+        "Medication adherence reached 74% overall, with the top 25% achieving near-perfect compliance",
+        "Average daily steps increased to 6,348, more than 3× typical baseline activity levels",
+        "Users reported high satisfaction with the program, averaging over 4 out of 5 stars"
       ],
 
       reflection:
