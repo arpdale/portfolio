@@ -40,7 +40,7 @@ export default function CaseStudyHeader({
               <p className="text-lg">{role}</p>
             </div>
             <div>
-              <p className="text-sm text-gray-400 mb-1">Duration</p>
+              <p className="text-sm text-gray-400 mb-1">Dates</p>
               <p className="text-lg">{duration}</p>
             </div>
           </div>

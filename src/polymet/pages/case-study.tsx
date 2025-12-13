@@ -136,7 +136,7 @@ export default function CaseStudyPage() {
       subtitle:
         "Using data to define user archetypes and create service blueprints that aligned teams and uncovered new product opportunities.",
       image: "https://picsum.photos/seed/usaa012/1200/600",
-      role: "Design Directory, Real Estate Lending",
+      role: "Design Director, Real Estate Lending",
       duration: "2019 - 2022",
       challenge:
         "USAA's mortgage experience was designed as a one-size-fits-all journey, but military members have unique circumstances that affect their home buying process. The existing system didn't account for frequent relocations, deployment schedules, or VA loan eligibility.",
