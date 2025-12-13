@@ -93,7 +93,7 @@ export default function AboutPage() {
                 across healthcare, fintech, and emerging technologies.
               </p>
               <p>
-                In 2005, I founded Design For Use, a design agency that grew to
+                In 2008, I founded Design For Use, a design agency that grew to
                 28 people across the US and South America. We partnered with
                 organizations ranging from startups to Fortune 500 companies,
                 helping them create digital products that delivered real
